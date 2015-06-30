@@ -6,7 +6,7 @@ set colorcolumn=85           "彩色显示第85行
 set t_Co=256                 "设置256色显示
 set background=dark          "使用color solarized
 set cursorline               "设置光标高亮显示
-set cursorcolumn             "光标垂直高亮
+"set cursorcolumn             "光标垂直高亮
 set mouse=a                  "鼠标滚动
 set ttyfast
 set ruler
@@ -29,13 +29,14 @@ set nowritebackup
 "set encoding=utf-8
 
 "set laststatus=2
-"set number                                    "显示行号
+set number                                    "显示行号
+set encoding=utf8
 "set undofile                                  "无限undo
 "set nowrap                                    "禁止自动换行
 "autocmd! bufwritepost _vimrc source %         "自动载入配置文件不需要重启
 
 "相对行号 要想相对行号起作用要放在显示行号后面
-set relativenumber
+"set relativenumber
 "自动换行
 set wrap
 "GUI界面里的字体，默认有抗锯齿
@@ -130,7 +131,7 @@ set go-=L
 
 
 "Vundle Settings {
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=$VIM/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -147,6 +148,15 @@ Bundle "wavded/vim-stylus"
 Bundle "mxw/vim-jsx"
 Bundle "brettof86/vim-swigjs"
 Bundle "digitaltoad/vim-jade"
+Bundle "tpope/vim-fugitive"
+
+Bundle "taq/vim-git-branch-info"
+set laststatus=2 " Enables the status line at the bottom of Vim
+set statusline=%{GitBranchInfoString()}
+
+Bundle "motemen/git-vim"
+set laststatus=2
+set statusline=%{GitBranch()}
 
 Bundle 'junegunn/vim-easy-align'
   vmap <Enter> <Plug>(EasyAlign)
@@ -189,10 +199,10 @@ Bundle 'The-NERD-Commenter'
   "支持单行和多行的选择，//格式
   map <c-h> ,c<space>
 
-Bundle 'UltiSnips'
-  let g:UltiSnipsExpandTrigger="<c-j>"
-  let g:UltiSnipsJumpForwardTrigger="<c-j>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"Bundle 'UltiSnips'
+  "let g:UltiSnipsExpandTrigger="<c-j>"
+  "let g:UltiSnipsJumpForwardTrigger="<c-j>"
+  "let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 "Bundle 'FencView.vim'
   "let g:fencview_autodetect=1
@@ -209,3 +219,9 @@ Bundle 'UltiSnips'
 "放置在Bundle的设置后，防止意外BUG
 filetype plugin indent on
 syntax on
+"=============================
+autocmd FileType python setlocal tabstop=4 ts=4 expandtab list nu shiftwidth=4 softtabstop=4 textwidth=79
+autocmd FileType python nmap <F5> :w!<CR>:!python %<cr>
+execute('nmap <F6> <Esc>:w<CR>:!python "'.$VIM.'/post.py" "%:p"<cr>')
+nmap <F3> <Esc>:w<CR>:!git commit -a<cr>
+"=============================
