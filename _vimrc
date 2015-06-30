@@ -133,7 +133,7 @@ set go-=L
 "Vundle Settings {
 set rtp+=$VIM/.vim/bundle/vundle
 call vundle#rc()
-
+Plugin 'tpope/vim-fugitive'
 Bundle 'gmarik/vundle'
 Bundle "mattn/emmet-vim"
 Bundle 'Auto-Pairs'
@@ -148,15 +148,15 @@ Bundle "wavded/vim-stylus"
 Bundle "mxw/vim-jsx"
 Bundle "brettof86/vim-swigjs"
 Bundle "digitaltoad/vim-jade"
-Bundle "tpope/vim-fugitive"
+"Bundle "tpope/vim-fugitive"
 
 Bundle "taq/vim-git-branch-info"
 set laststatus=2 " Enables the status line at the bottom of Vim
 set statusline=%{GitBranchInfoString()}
 
-Bundle "motemen/git-vim"
-set laststatus=2
-set statusline=%{GitBranch()}
+"Bundle "motemen/git-vim"
+"set laststatus=2
+"set statusline=%{GitBranch()}
 
 Bundle 'junegunn/vim-easy-align'
   vmap <Enter> <Plug>(EasyAlign)
@@ -199,6 +199,18 @@ Bundle 'The-NERD-Commenter'
   "支持单行和多行的选择，//格式
   map <c-h> ,c<space>
 
+"=============================================
+" Better file browser
+Bundle 'scrooloose/nerdtree'
+" Git integration
+Bundle 'motemen/git-vim'
+" Python mode (indentation, doc, refactor, lints, code checking, motion and
+" operators, highlighting, run and ipdb breakpoints)
+Bundle 'klen/python-mode'
+" Better autocompletion
+Bundle 'Shougo/neocomplcache.vim'
+
+"=============================================
 "Bundle 'UltiSnips'
   "let g:UltiSnipsExpandTrigger="<c-j>"
   "let g:UltiSnipsJumpForwardTrigger="<c-j>"
