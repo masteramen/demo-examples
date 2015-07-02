@@ -608,6 +608,3 @@ autocmd FileType python nmap <F5> :w!<CR>:!python %<cr>
 execute('nmap <F6> <Esc>:w<CR>:!python "'.$VIM.'/post.py" "%:p"<cr>')
 nmap <F3> <Esc>:w<CR>:!git commit -a<cr>
 "=============================
-language messages zh_CN.utf-8
-silent !git config --global masteramen
-silent !git config --global credential.helper winstore
