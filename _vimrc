@@ -154,7 +154,8 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-" ============================================================================Bundle 'jaredly/vim-debug'
+" ============================================================================
+Bundle 'jaredly/vim-debug'
 " Better file browser
 Bundle 'scrooloose/nerdtree'
 " Code commenter
