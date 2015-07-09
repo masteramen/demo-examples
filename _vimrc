@@ -176,7 +176,7 @@ Bundle 'kien/tabman.vim'
 " Airline
 Bundle 'bling/vim-airline'
 " Terminal Vim with 256 colors colorscheme
-Bundle 'fisadev/fisa-vim-colorscheme'
+"Bundle 'fisadev/fisa-vim-colorscheme'
 " Consoles as buffers
 Bundle 'rosenfeld/conque-term'
 " Pending tasks list
@@ -223,7 +223,7 @@ Bundle 'IndexedSearch'
 " XML/HTML tags navigation
 Bundle 'matchit.zip'
 " Gvim colorscheme
-Bundle 'Wombat'
+"Bundle 'Wombat'
 " Yank history navigation
 Bundle 'YankRing.vim'
 
@@ -371,17 +371,17 @@ nmap ,wR :RecurGrep <cword><CR>
 nmap ,wr :RecurGrepFast <cword><CR>
 
 " use 256 colors when possible
-if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
-	let &t_Co = 256
-    colorscheme fisa
-else
-    colorscheme delek
-endif
+"if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
+	"let &t_Co = 256
+    "colorscheme fisa
+"else
+    "colorscheme delek
+"endif
 
 " colors for gvim
-if has('gui_running')
-    colorscheme wombat
-endif
+"if has('gui_running')
+    "colorscheme wombat
+"endif
 
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
