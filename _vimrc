@@ -154,8 +154,7 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-" ============================================================================
-Bundle 'jaredly/vim-debug'
+" ============================================================================Bundle 'jaredly/vim-debug'
 " Better file browser
 Bundle 'scrooloose/nerdtree'
 " Code commenter
@@ -190,7 +189,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'michaeljsmith/vim-indent-object'
 " Python mode (indentation, doc, refactor, lints, code checking, motion and
 " operators, highlighting, run and ipdb breakpoints)
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 " Better autocompletion
 Bundle 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
@@ -201,7 +200,7 @@ Bundle 'garbas/vim-snipmate'
 " Git/mercurial/others diff icons on the side of the file lines
 Bundle 'mhinz/vim-signify'
 " Automatically sort python imports
-Bundle 'fisadev/vim-isort'
+"Bundle 'fisadev/vim-isort'
 " Drag visual blocks arround
 Bundle 'fisadev/dragvisuals.vim'
 " Window chooser
